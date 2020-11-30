@@ -5,11 +5,9 @@ def derivation(x, f):
     F = (f(x+delta) - f(x))/delta
     return round(F, 2)
 
-def gradient(function):
+def gradient(x1, x2, function):
     list_lims = []
     delta = 0.00001
-    x1 = 10
-    x2 = 1
     lim_x = (function(x1 + delta, x2) - function(x1, x2)) / delta
     list_lims.append(round(lim_x, 2))
     lim_y = (function(x1, x2 + delta) - function(x1, x2)) / delta
