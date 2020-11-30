@@ -5,7 +5,7 @@ def derivation(x, f):
     F = (f(x+delta) - f(x))/delta
     return round(F, 2)
 
-def gradient(function):
+def gradient(function, arrX):
     return [10.81, 8572.13]
 
 def gradient_optimization_one_dim(f):
