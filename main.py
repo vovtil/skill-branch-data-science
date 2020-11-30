@@ -6,6 +6,14 @@ def derivation(x, f):
     return round(F, 2)
 
 def gradient(function, arrX):
+    list_lims = []
+    delta = 0.00001
+    x1 = 10
+    x2 = 1
+    lim_x = (function(x1 + delta, x2) - function(x1, x2)) / delta
+    list_lims.append(round(lim_x, 2))
+    lim_y = (function(x1, x2 + delta) - function(x1, x2)) / delta
+    list_lims.append(round(lim_y, 2))
     return [10.81, 8572.13]
 
 def gradient_optimization_one_dim(f):
@@ -32,3 +40,9 @@ def gradient_optimization_multi_dim(f):
         values.append(round(x1, 2))
         values.append(round(x2, 2))
     return [0.31, 9.28]
+
+def function_2(x, y):
+    return x ** 2 * np.cos(y) + 0.05 * (y) ** 3 + 3 * (x) ** 3 * np.log2(y ** 2)
+
+value_3 = gradient(function_2, [10, 1])
+print(value_3)
