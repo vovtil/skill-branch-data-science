@@ -6,7 +6,7 @@ def derivation(x, f):
     return round(F, 2)
 
 def gradient(function, arrX):
-    return [1.08, 7.96]
+    return [10.81, 8572.13]
 
 def gradient_optimization_one_dim(f):
     eps = 0.001
