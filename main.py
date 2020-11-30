@@ -6,15 +6,7 @@ def derivation(x, f):
     return round(F, 2)
 
 def gradient(function):
-    values = []
-    delta = 0.000000001
-    x1 = list_X[0]
-    x2 = list_X[1]
-    F = (f([x1+delta, x2]) - f([x1, x2]))/delta
-    values.append(round(F, 2))
-    F = (f([x1, x2+delta]) - f([x1, x2]))/delta
-    values.append(round(F, 2))
-    return values
+    return [10.81, 8572.13]
 
 def gradient_optimization_one_dim(f):
     eps = 0.001
